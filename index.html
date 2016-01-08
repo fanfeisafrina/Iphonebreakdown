@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Iphone breakdown</title>
+    <style type="text/css">
+        #graphic{
+            display:block;
+            margin: 10px auto;
+        }
+        #legend {
+            position: absolute;
+            top: 450px;
+            right: 200px;
+        }
+        h2{
+            position: relative;
+            left:250px; 
+            color: #969696;
+            font-family: sans-serif;
+            font-size: 20px;
+        }
+        /* Controls */
+        div#controls {
+        margin-left: -300px;
+        margin-top: -400px;
+          padding: 24px 0px 12px 0px;
+          text-align: center;
+          font-size: 12px;
+          user-select: none;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+        }
+
+        span.arrow {
+          cursor: pointer;
+          background-color: #444;
+          opacity: 0.7;
+          color: #fff;
+          padding: 8px 15px;
+          border-radius: 4px;
+          -moz-border-radius: 4px;
+          -webkit-border-radius: 4px;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+          font-weight: 900;
+        }
+
+        span.arrow:hover {
+          background-color: #000;
+        }
+
+        div#controls.disabled {
+          opacity: 0.7;
+        }
+
+        span.arrow.disabled {
+          opacity: 0.5;
+        }
+
+        span.arrow.disabled:hover {
+          background-color: #444;
+          opacity: 0.5;
+        }
+
+        i.pip {
+          margin: 0px 5px;
+          cursor: pointer;
+        }
+
+        i.pip.past {
+          opacity: 0.4;
+        }
+
+        i.pip.current {
+          color: #2baa91;
+          cursor: auto;
+        }
+    
+        .fa {
+            display: inline-block;
+            font-family: FontAwesome;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .fa-circle:before {
+            content: "\f111";
+            color:#2baa91;
+        }
+
+        #manufacturing{
+            display:inline;
+            float:left;
+            margin-top:-750px;
+            margin-left: 50px;
+            width:100px;
+            height:100px;
+        }
+
+
+        #operating{
+            display:inline;
+            float:left;
+            margin-top:-750px; 
+            margin-left: 350px;
+            width:100px;
+            height:100px;
+        }
+
+        #wholesale{
+            display:inline;
+            float:left;
+            margin-top:-750px; 
+            margin-left: 650px;
+            width:100px;
+            height:100px;
+        }
+
+        #profit{
+            display:inline;
+            float:left;
+            margin-top:-750px; 
+            margin-left: 950px;
+            width:100px;
+            height:100px;
+        }
+
+        button{
+            display: none;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+<h2> Breaking down the full $650 cost of the iPhone 5</h2>
+<button id="1" type="button">Manufacturing</button>
+<button type="button">Operating</button>
+<button type="button">Wholesale</button>
+<button type="button">Profit</button>
+
+<div id="rect"></div>
+<div id="manufacturing"></div>
+<div id="operating"></div>
+<div id="wholesale"></div>
+<div id="profit"></div>
+<div id="legend"></div>
+<div id="controls" class="hidden disabled">
+        <span class="arrow" id="prev">PREV</span>
+        <i class="pip fa fa-circle"></i>
+        <i class="pip fa fa-circle"></i>
+        <i class="pip fa fa-circle"></i>
+        <i class="pip fa fa-circle"></i>
+        <i class="pip fa fa-circle"></i>
+        <i class="pip fa fa-circle"></i>
+        <i class="pip fa fa-circle"></i>
+        <span class="arrow" id="next">NEXT</span>
+      </div>
+<script src="font-awesome.min.css"></script>
+<script src="./d3.js" charset="utf-8"></script>
+<script type="text/javascript">
+
+    
+    var width  = 850,
+        height = 800;
+    
+    var svg = d3.select("#rect")
+        .append("svg")
+        .attr("id", "graphic")
+        .attr("width", width)
+        .attr("height", height);
+
+      var manufacturing = d3.select("#manufacturing")
+        .append("svg")
+        .attr("id", "graphic")
+        .attr("width", 300)
+        .attr("height", 400);
+
+        var operating = d3.select("#operating")
+        .append("svg")
+        .attr("id", "graphic")
+        .attr("width", 300)
+        .attr("height", 400);
+
+        var profit = d3.select("#profit")
+        .append("svg")
+        .attr("id", "graphic")
+        .attr("width", 300)
+        .attr("height", 400);
+
+        var wholesale = d3.select("#wholesale")
+        .append("svg")
+        .attr("id", "graphic")
+        .attr("width", 300)
+        .attr("height", 400);
+
+
+
+
+    var howManyAcross = Math.floor(width / 25) - 1;
+    var howManyAcrossSmall = Math.floor(width / 50) - 1;
+
+
+    var thedata = [];
+
+    var thecolor =["#2BAA91","#CC3E21","#4283D1","#FFBB00"];
+
+    var category =["Manufacturing","Operating Expenses","Wholesale to Retail Markup","Profit"];
+
+    var newArray =[];
+    var secondArray=[];
+    var thirdArray=[];
+    var fourthArray=[];
+
+
+    for(var i=0; i <= 650; i++){
+        if(i<=227){
+            thedata[i] = '#2BAA91';         
+        } else if(i <= 288 && i> 227) {
+            thedata[i]='#CC3E21';
+        } else if(i <=357 && i>288){
+            thedata[i]='#4283D1';
+        }
+        else{
+            thedata[i]='#FFBB00';
+        }
+    };
+
+    for(var i=0; i<= 226;i++){
+        newArray[i]="xx";
+    }
+
+    for(var i=0; i<= 60;i++){
+        secondArray[i]="yy";
+    }
+
+    for(var i=0; i<= 68;i++){
+        thirdArray[i]="yy";
+    }
+
+    for(var i=0; i<= 292;i++){
+        fourthArray[i]="yy";
+    }
+    
+    svg.selectAll("g")
+        .data(thedata)
+        .enter()
+        .append("g")
+        .attr("transform", function(d, i){ return "translate(" + ((i % howManyAcross) * 17) + "," + (Math.floor(i/howManyAcross) * 17) + ")"})
+        .append('rect')
+        .attr("width",50)
+        .attr("height",50)
+        .attr("transform","scale(0.3)")
+        .style("fill", function(d){ return d; });
+
+
+            var info= d3.select("#legend")
+                .append("svg")
+                .attr("width", 400)
+                .attr("height", 100)
+                .selectAll('g')
+                .data(thecolor)
+                .enter()
+                .append('g')
+                .attr("x",800);
+
+            info.append("g")       
+                .append('rect')
+                .attr("width",50)
+                .attr("height",50)
+                .attr("transform", function(d,i){
+                    return "scale(0.3) translate(" + (400) + ' ' + (100 + 60*i) +  ")";
+                })
+                .style("fill", function(d){ return d; });
+
+
+                info
+                .selectAll("g")
+                .data(category)
+                .enter()
+                .append("g")
+                .attr("transform", function(d,i){
+                    return "scale(0.3) translate(" + (520) + ' ' + (140 + 60*i) +  ")"
+                })
+                .append('text')
+                .text(function(d){return d})
+                .style("font-size","30px");
+
+                d3.select("h2")
+                .on("click",function(){
+                    var thedata = [];
+
+                for(var i=0; i <= 500; i++){
+                    if(i<=227){
+                        thedata[i] = '#2BAA91';
+                    } else if(i <= 288 && i> 227) {
+                        thedata[i]='#CC3E21';
+                    } else if(i <=357 && i>288){
+                        thedata[i]='#4283D1';
+                    }
+                    else{
+                        thedata[i]='#FFBB00';
+                    }
+                };
+                svg.selectAll("g")
+                    .remove();
+
+
+            
+            manufacturing.selectAll("g")
+                .data(newArray)
+                .enter()
+                .append("g")
+                .attr("transform", function(d, i){ return "translate(" + ((i % howManyAcrossSmall) * 17) + "," + (Math.floor(i/howManyAcrossSmall) * 17) + ")"})
+                .append('rect')
+                .attr("width",50)
+                .attr("height",50)
+                .attr("transform","scale(0.3)") 
+                .style("fill", "white")                                   
+                .transition()
+                .duration(1000)
+                .style("fill", "#2BAA91");
+
+            
+            operating.selectAll("g")
+                .data(secondArray)
+                .enter()
+                .append("g")
+                .attr("transform", function(d, i){ return "translate(" + ((i % howManyAcrossSmall) * 17) + "," + (Math.floor(i/howManyAcrossSmall) * 17) + ")"})
+                .append('rect')
+                .attr("width",50)
+                .attr("height",50)
+                .attr("transform","scale(0.3)") 
+                .style("fill", "white")                                   
+                .transition()
+                .duration(1000)
+                .style("fill", "#CC3E21");
+
+            wholesale.selectAll("g")
+                .data(thirdArray)
+                .enter()
+                .append("g")
+                .attr("transform", function(d, i){ return "translate(" + ((i % howManyAcrossSmall) * 17) + "," + (Math.floor(i/howManyAcrossSmall) * 17) + ")"})
+                .append('rect')
+                .attr("width",50)
+                .attr("height",50)
+                .attr("transform","scale(0.3)") 
+                .style("fill", "white")                                   
+                .transition()
+                .duration(1000)
+                .style("fill", "#4283D1");
+
+            
+            profit.selectAll("g")
+                .data(fourthArray)
+                .enter()
+                .append("g")
+                .attr("transform", function(d, i){ return "translate(" + ((i % howManyAcrossSmall) * 17) + "," + (Math.floor(i/howManyAcrossSmall) * 17) + ")"})
+                .append('rect')
+                .attr("width",50)
+                .attr("height",50)
+                .attr("transform","scale(0.3)") 
+                .style("fill", "white")                                   
+                .transition()
+                .duration(1000)
+                .style("fill", "#FFBB00");
+            });   
+
+$( "h2" ).click(function() {
+  $( "button" ).show( "slow", function() {
+    // Animation complete.
+  });
+});
+
+</script>
+</body>
+</html>
