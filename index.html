@@ -418,10 +418,10 @@
     var secondArray=[];
     var thirdArray=[];
     var fourthArray=[];
-    var flash1 =[];
-    var display1=[];
-    var processor1=[];
-    var sensor1=[];
+    var flash=[];
+    var display=[];
+    var processor=[];
+    var sensor=[];
     var camera1=[];
     var cellular1=[];
     var wireless1=[];
@@ -636,8 +636,8 @@
                 profit.selectAll("g")
                     .remove();
 
-            flash.selectAll("g")
-                .data(flash1)
+            manufacturing.selectAll("g")
+                .data(flash)
                 .enter()
                 .append("g")
                 .attr("transform", function(d, i){ return "translate(" + ((i % howManyAcrossSmall) * 10) + "," + (Math.floor(i/howManyAcrossSmall) * 10) + ")"})
@@ -651,8 +651,8 @@
                 .style("fill", "#2BAA91");
 
             
-            display.selectAll("g")
-                .data(display1)
+            operating.selectAll("g")
+                .data(display)
                 .enter()
                 .append("g")
                 .attr("transform", function(d, i){ return "translate(" + ((i % howManyAcrossSmall) * 10) + "," + (Math.floor(i/howManyAcrossSmall) * 10) + ")"})
@@ -665,8 +665,8 @@
                 .duration(1000)
                 .style("fill", "#2BAA91");
 
-            processor.selectAll("g")
-                .data(processor1)
+            wholesale.selectAll("g")
+                .data(processor)
                 .enter()
                 .append("g")
                 .attr("transform", function(d, i){ return "translate(" + ((i % howManyAcrossSmall) * 10) + "," + (Math.floor(i/howManyAcrossSmall) * 10) + ")"})
@@ -680,8 +680,8 @@
                 .style("fill", "#2BAA91");
 
             
-            sensor.selectAll("g")
-                .data(sensor1)
+            profit.selectAll("g")
+                .data(sensor)
                 .enter()
                 .append("g")
                 .attr("transform", function(d, i){ return "translate(" + ((i % howManyAcrossSmall) * 10) + "," + (Math.floor(i/howManyAcrossSmall) * 10) + ")"})
