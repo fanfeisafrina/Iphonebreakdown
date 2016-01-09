@@ -95,7 +95,7 @@
         #manufacturing{
             display:inline;
             float:left;
-            margin-top:-750px;
+            margin-top:-800px;
             margin-left: 50px;
             width:100px;
             height:100px;
@@ -105,7 +105,7 @@
         #operating{
             display:inline;
             float:left;
-            margin-top:-750px; 
+            margin-top:-800px; 
             margin-left: 350px;
             width:100px;
             height:100px;
@@ -114,7 +114,7 @@
         #wholesale{
             display:inline;
             float:left;
-            margin-top:-750px; 
+            margin-top:-800px; 
             margin-left: 650px;
             width:100px;
             height:100px;
@@ -123,7 +123,7 @@
         #profit{
             display:inline;
             float:left;
-            margin-top:-750px; 
+            margin-top:-800px; 
             margin-left: 950px;
             width:100px;
             height:100px;
@@ -248,12 +248,45 @@
             width:100px;
             height:100px;
         }
+        #manufacturing1{
+            display: inline;
+            position: relative;
+            font-family: sans-serif;
+            color:#949494;
+            left:50px;
+            font-size: 15px;
 
-        p{
-            top:0px;
-            font-size: 12px;
-            color:red;
         }
+
+        #operating1{
+            display: inline;
+            position: relative;
+            font-family: sans-serif;
+            color:#949494;
+            left:240px;
+            font-size: 15px;
+        }
+
+        #wholesale1{
+            display: inline;
+            position: relative;
+            font-family: sans-serif;
+            color:#949494;
+            left:390px;
+            font-size: 15px;            
+        }
+
+        #profit1{
+            display: inline;
+            position: relative;
+            font-family: sans-serif;
+            color:#949494;
+            left:490px;
+            font-size: 15px;
+        }
+
+
+
 
 
     </style>
@@ -262,6 +295,12 @@
 
 <h2> Breaking down the full $650 cost of the iPhone 5</h2>
 <h3 id="manufacturing1">Manufacturing</h3>
+<h3 id="operating1">Operating Expenses</h3>
+<h3 id="wholesale1">Wholesale to Retail Markup   </h3>
+<h3 id="profit1">Profit</h3>
+
+
+
 
 <div id="rect"></div>
 <div id="manufacturing"></div>
@@ -654,6 +693,8 @@ $("h3").hide();
                     .remove();
                 profit.selectAll("g")
                     .remove();
+
+                $("h3").hide();
 
             manufacturing.selectAll("g")
                 .data(flash)
