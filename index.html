@@ -285,6 +285,140 @@
             font-size: 15px;
         }
 
+         #flash2{
+            position: relative;
+            display:inline;
+            float:left;
+            left:50px;
+            font-family: sans-serif;
+            color:#949494;
+            font-size: 10px;
+            margin-bottom: -100px;
+        }
+
+
+        #display2{
+            position: relative;
+            display:inline;
+            float:left;
+            width:100px;
+            height:100px;
+            left:350px;
+            font-family: sans-serif;
+            color:#949494;
+            font-size: 10px;
+             margin-bottom: -100px;
+
+        }
+
+        #processor2{
+            position: relative;  
+            display:inline;
+            float:left;
+            width:100px;
+            height:100px;
+            left:530px;
+            font-family: sans-serif;
+            color:#949494;
+            font-size: 10px;
+        }
+
+        #sensor2{
+            position: relative;
+            display:inline;
+            float:left;
+            width:100px;
+            height:100px;
+            left:730px;
+            font-family: sans-serif;
+            color:#949494;
+            font-size: 10px;
+        } 
+
+        #camera2{
+            position: relative;
+            display:inline;
+            float:left;
+            width:100px;
+            height:100px;
+            left:350px;
+            font-family: sans-serif;
+            color:#949494;
+            font-size: 10px;
+             margin-bottom: -100px;
+        }
+
+
+        #cellular2{
+            position: relative;
+            display:inline;
+            float:left;
+            width:100px;
+            height:100px;
+        }
+
+        #wireless2{
+            position: relative;
+            display:inline;
+            float:left;
+            width:100px;
+            height:100px;
+        }
+
+        #battery2{
+            position: relative;
+            display:inline;
+            float:left;
+            width:100px;
+            height:100px;
+        }
+
+        #power2{
+            position: relative;
+            display:inline;
+            float:left;
+            width:100px;
+            height:100px;
+        } 
+
+        #mechanical2{
+            position: relative;
+            display:inline;
+            float:left;
+
+            width:100px;
+            height:100px;
+        }
+
+
+        #packaging2{
+            position: relative;
+            display:inline;
+            float:left;
+  
+            width:100px;
+            height:100px;
+        }
+
+        #production2{
+            position: relative;
+            display:inline;
+            float:left;
+            top:-450px; 
+            left: 650px;
+            width:100px;
+            height:100px;
+        }
+
+        #licensing2{
+            position: relative;
+            display:inline;
+            float:left;
+
+            width:100px;
+            height:100px;
+        }
+
 
 
 
@@ -298,10 +432,10 @@
 <h3 id="operating1">Operating Expenses</h3>
 <h3 id="wholesale1">Wholesale to Retail Markup   </h3>
 <h3 id="profit1">Profit</h3>
-
-
-
-
+<h4 id="flash2">Flash Memory /amp RAM</h4>
+<h4 id="display2">Display /amp Touchscreen </h4>
+<h4 id="processor2">Processor</h4>
+<h4 id="sensor2">Sensors</h4>
 <div id="rect"></div>
 <div id="manufacturing"></div>
 <div id="operating"></div>
@@ -311,10 +445,19 @@
 <div id="display"></div>
 <div id="processor"></div>
 <div id="sensor"></div>
+<h4 id="camera2">Cameras</h4>
+<h4 id="cellular2">Cellular Radio</h4>
+<h4 id="Wireless2">Wireless Radio</h4>
+<h4 id="Battery">Battery</h4>
 <div id="camera"></div>
 <div id="cellular"></div>
 <div id="wireless"></div>
 <div id="battery"></div>
+<h4 id="power2">Power Management</h4>
+<h4 id="mechanical2">Mechanical Parts</h4>
+<h4 id="packaging2">Packaging</h4>
+<h4 id="production2">Production</h4>
+<h4 id="licensing2">Licensing Fees</h4>
 <div id="power"></div>
 <div id="mechanical"></div>
 <div id="packaging"></div>
@@ -339,6 +482,7 @@
 <script type="text/javascript">
 
 $("h3").hide();
+$("h4").hide();
 
 
     
@@ -695,6 +839,8 @@ $("h3").hide();
                     .remove();
 
                 $("h3").hide();
+                $("h4").show("slow");
+
 
             manufacturing.selectAll("g")
                 .data(flash)
