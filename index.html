@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Iphone breakdown</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
     <style type="text/css">
     svg {
         margin-left:auto;
@@ -28,7 +29,7 @@
     div#controls {
         position: absolute;
         left: 480px;
-        top: 450px;
+        top: 500px;
         padding: 24px 0px 12px 0px;
         text-align: center;
         font-size: 12px;
@@ -110,6 +111,7 @@
 #containerLevel1 h3{
     text-align: left;
     padding-left: 20px;
+    font-size: 13px;
 }
 #containerLevel2 h4 {
     padding-left: 10px;
@@ -119,7 +121,7 @@
     display:inline-block;
     font-family: sans-serif;
     color:#949494;
-    font-size: 15px;
+    font-size: 12px;
     margin: 10px 10px;
 }
 
@@ -129,63 +131,105 @@
     font-family: sans-serif;
     color:#949494;
     font-size: 11px;
-    margin: 5px 5px;
+    margin: 20px 15px;
     height: 80px;
 }
 
 .container {
     margin: 20px 50px;
 }
+
+p{
+    position:relative;
+    padding-left: 100px;
+    padding-right: 100px;
+    color: #969696;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 18px;
+}
+
+#red{
+    color:#CC3E21;
+    font-weight: bold; 
+}
+
+#green{
+    color:#2BAA91;
+    font-weight: bold; 
+}
+
+#blue{
+    color:#4283D1;        
+    font-weight: bold; 
+}
+
+#yellow{
+    color:#FFBB00;
+    font-weight: bold; 
+}
+#number{
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
 </style>
 </head>
 <body>
 
     <h2 id="title"> Breaking down the full $650 cost of the iPhone 5</h2>
+    
     <div id="containerLevel0" class="container" >
+        <p>Do you know how much money Apple is making off every device it sells? This cost calculation is for the USA edition of both the iPhone 5 with 16GB of internal file storage and LTE connectivity. Every variation of a device has a different Bill of Materials, so even changing the color of a phone might alter its price by a little. </p>
+
     </div>
 
+
+
     <div id="containerLevel1" class="container" style="display:none">
+        <p>We break down the full $650 cost of the iPhone 5 into four components: <span id="green">Manufacturing</span>, <span id="red">Operating Expenses</span>, <span id="blue">Wholesale to Retail Markup </span> and <span id="yellow">Profit</span>.</p>
         <div id="manufacturing" class="level1">
-            <h3 id="manufacturing1">Manufacturing</h3>
+            <h3 id="manufacturing1">Manufacturing <span id="number"> ($225.85)</span></h3>
         </div>
         <div id="operating" class="level1">
-            <h3 id="operating1">Operating Expenses</h3>
+            <h3 id="operating1">Operating Expenses <span id="number"> ($61.18)</span></h3>
         </div>
         <div id="wholesale" class="level1">
-            <h3 id="wholesale1">Wholesale to Retail Markup</h3>
+            <h3 id="wholesale1">Wholesale to Retail Markup <span id="number"> ($68.9)</span></h3>
         </div>
         <div id="profit" class="level1">
-            <h3 id="profit1">Profit</h3>
+            <h3 id="profit1">Profit <span id="number"> ($293.06)</span></h3>
         </div>
+
+
     <!-- end of #containerLevel1-->
     </div>
 
     <div id="containerLevel2" class="container" style="display:none">
-        <div id="flash" class="level2"><h4 id="flash2">Flash Memory &amp RAM</h4>
+        <p>Let's further break down its manufacturing cost and add up the price of all the components and materials inside iPhone.There are dozens of components ranging from processors to displays to gyrometers, and they range in price from a few dollars to $30 and up.</p>
+        <div id="flash" class="level2"><h4 id="flash2">Flash Memory &amp RAM<span id="number"> ($20.85)</span></h4>
         </div>
-        <div id="display" class="level2"><h4 id="display2">Display &amp Touchscreen</h4>
+        <div id="display" class="level2"><h4 id="display2">Display &amp Touchscreen<span id="number"> ($44)</span></h4>
         </div>
-        <div id="processor" class="level2"><h4 id="processor2">Processor</h4>
+        <div id="processor" class="level2"><h4 id="processor2">Processor<span id="number"> ($17.5)</span></h4>
         </div>
-        <div id="sensor" class="level2"><h4 id="sensor2">Sensors</h4>
+        <div id="sensor" class="level2"><h4 id="sensor2">Sensors<span id="number"> ($6.5)</span></h4>
         </div>
-        <div id="camera" class="level2"><h4 id="camera2">Cameras</h4>
+        <div id="camera" class="level2"><h4 id="camera2">Cameras<span id="number"> ($18)</span></h4>
         </div>
-        <div id="cellular" class="level2"><h4 id="cellular2">Cellular Radio</h4>
+        <div id="cellular" class="level2"><h4 id="cellular2">Cellular Radio<span id="number"> ($34)</span></h4>
         </div>
-        <div id="wireless" class="level2"><h4 id="wireless2">Wireless Radio</h4>
+        <div id="wireless" class="level2"><h4 id="wireless2">Wireless Radio<span id="number"> ($5)</span></h4>
         </div>
-        <div id="battery" class="level2"><h4 id="battery2">Battery</h4>
+        <div id="battery" class="level2"><h4 id="battery2">Battery<span id="number"> ($4.5)</span></h4>
         </div>
-        <div id="power" class="level2"><h4 id="power2">Power Management</h4>
+        <div id="power" class="level2"><h4 id="power2">Power Management<span id="number"> ($8.5)</span></h4>
         </div>
-        <div id="mechanical" class="level2"><h4 id="mechanical2">Mechanical Parts</h4>
+        <div id="mechanical" class="level2"><h4 id="mechanical2">Mechanical Parts<span id="number"> ($33)</span></h4>
         </div>
-        <div id="packaging" class="level2"><h4 id="packaging2">Packaging</h4>
+        <div id="packaging" class="level2"><h4 id="packaging2">Packaging<span id="number"> ($7)</span></h4>
         </div>
-        <div id="production" class="level2"><h4 id="production2">Production</h4>
+        <div id="production" class="level2"><h4 id="production2">Production<span id="number"> ($8)</span></h4>
         </div>
-        <div id="licensing" class="level2"><h4 id="licensing2">Licensing Fees</h4>
+        <div id="licensing" class="level2"><h4 id="licensing2">Licensing Fees<span id="number"> ($20)</span></h4>
         </div>
     <!-- end of #containerLevel2-->
     </div>
@@ -216,103 +260,103 @@
         var manufacturing = d3.select("#manufacturing")
         .append("svg")
         .attr("class", "graphic")
-        .attr("width", 300)
-        .attr("height", 400);
+        .attr("width", 250)
+        .attr("height", 300);
 
         var operating = d3.select("#operating")
         .append("svg")
         .attr("class", "graphic")
-        .attr("width", 300)
-        .attr("height", 400);
+        .attr("width", 250)
+        .attr("height", 300);
 
         var profit = d3.select("#profit")
         .append("svg")
         .attr("class", "graphic")
-        .attr("width", 300)
-        .attr("height", 400);
+        .attr("width", 250)
+        .attr("height", 300);
 
         var wholesale = d3.select("#wholesale")
         .append("svg")
         .attr("class", "graphic")
-        .attr("width", 300)
-        .attr("height", 400);
+        .attr("width", 250)
+        .attr("height", 300);
 
         var flash = d3.select("#flash")
         .append("svg")
         .attr("class", "graphic")
-        .attr("width", 300)
+        .attr("width", 200)
         .attr("height", 150);
 
         var display = d3.select("#display")
         .append("svg")
         .attr("class", "graphic")
-        .attr("width", 300)
+        .attr("width", 200)
         .attr("height", 150);
 
         var processor = d3.select("#processor")
         .append("svg")
         .attr("class", "graphic")
-        .attr("width", 300)
+        .attr("width", 200)
         .attr("height", 150);
 
         var sensor = d3.select("#sensor")
         .append("svg")
         .attr("class", "graphic")
-        .attr("width", 300)
+        .attr("width", 200)
         .attr("height", 150);
 
         var camera = d3.select("#camera")
         .append("svg")
         .attr("class", "graphic")
-        .attr("width", 300)
+        .attr("width", 200)
         .attr("height", 150);
 
         var cellular = d3.select("#cellular")
         .append("svg")
         .attr("class", "graphic")
-        .attr("width", 300)
+        .attr("width", 200)
         .attr("height", 150);
 
         var wireless = d3.select("#wireless")
         .append("svg")
         .attr("class", "graphic")
-        .attr("width", 300)
+        .attr("width", 200)
         .attr("height", 150);
 
         var battery = d3.select("#battery")
         .append("svg")
         .attr("class", "graphic")
-        .attr("width", 300)
+        .attr("width", 200)
         .attr("height", 150);
 
         var power = d3.select("#power")
         .append("svg")
         .attr("class", "graphic")
-        .attr("width", 300)
+        .attr("width", 200)
         .attr("height", 150);
 
         var mechanical = d3.select("#mechanical")
         .append("svg")
         .attr("class", "graphic")
-        .attr("width", 300)
+        .attr("width", 200)
         .attr("height", 150);
 
         var packaging = d3.select("#packaging")
         .append("svg")
         .attr("class", "graphic")
-        .attr("width", 300)
+        .attr("width", 200)
         .attr("height", 150);
 
         var production = d3.select("#production")
         .append("svg")
         .attr("class", "graphic")
-        .attr("width", 300)
+        .attr("width", 200)
         .attr("height", 150);
 
         var licensing = d3.select("#licensing")
         .append("svg")
         .attr("class", "graphic")
-        .attr("width", 300)
+        .attr("width", 200)
         .attr("height", 150);
 
         var howManyAcross = Math.floor(width / 25) - 1;
@@ -343,12 +387,12 @@
         var production1=[];
         var licensing1=[];
 
-        for(var i=0; i <= 650; i++){
-            if(i<=227){
+        for(var i=0; i < 650; i++){
+            if(i<=226){
                 thedata[i] = '#2BAA91';         
-            } else if(i <= 288 && i> 227) {
+            } else if(i < 288 && i>= 227) {
                 thedata[i]='#CC3E21';
-            } else if(i <=357 && i>288){
+            } else if(i <357 && i>=287){
                 thedata[i]='#4283D1';
             }
             else{
@@ -356,71 +400,71 @@
             }
         };
 
-        for(var i=0; i<= 226;i++){
+        for(var i=0; i< 226;i++){
             newArray[i]="xx";
         }
 
-        for(var i=0; i<= 60;i++){
+        for(var i=0; i< 60;i++){
             secondArray[i]="yy";
         }
 
-        for(var i=0; i<= 68;i++){
+        for(var i=0; i< 68;i++){
             thirdArray[i]="yy";
         }
 
-        for(var i=0; i<= 292;i++){
+        for(var i=0; i< 292;i++){
             fourthArray[i]="yy";
         }
 
-        for(var i=0; i<= 21;i++){
+        for(var i=0; i< 21;i++){
             flash1[i]="xx";
         }
 
-        for(var i=0; i<= 44;i++){
+        for(var i=0; i< 44;i++){
             display1[i]="yy";
         }
 
-        for(var i=0; i<= 18;i++){
+        for(var i=0; i< 18;i++){
             processor1[i]="yy";
         }
 
-        for(var i=0; i<= 6;i++){
+        for(var i=0; i< 6;i++){
             sensor1[i]="yy";
         }
 
-        for(var i=0; i<= 18;i++){
+        for(var i=0; i< 18;i++){
             camera1[i]="yy";
         }
 
-        for(var i=0; i<= 34;i++){
+        for(var i=0; i< 34;i++){
             cellular1[i]="yy";
         }
 
-        for(var i=0; i<= 5;i++){
+        for(var i=0; i< 5;i++){
             wireless1[i]="yy";
         }
 
-        for(var i=0; i<= 5;i++){
+        for(var i=0; i< 5;i++){
             battery1[i]="yy";
         }
 
-        for(var i=0; i<= 8;i++){
+        for(var i=0; i< 8;i++){
             power1[i]="yy";
         }
 
-        for(var i=0; i<= 33;i++){
+        for(var i=0; i< 33;i++){
             mechanical1[i]="yy";
         }
 
-        for(var i=0; i<= 7;i++){
+        for(var i=0; i< 7;i++){
             packaging1[i]="yy";
         }
 
-        for(var i=0; i<= 8;i++){
+        for(var i=0; i< 8;i++){
             production1[i]="yy";
         }  
 
-        for(var i=0; i<= 20;i++){
+        for(var i=0; i< 20;i++){
             licensing1[i]="yy";
         } 
 
@@ -446,7 +490,7 @@
         .append('g')
         .attr("x",800);
 
-        info.append("g")       
+        info      
         .append('rect')
         .attr("width",50)
         .attr("height",50)
@@ -473,14 +517,15 @@
             .data(newArray)
             .enter()
             .append("g")
-            .attr("transform", function(d, i){ return "translate(" + ((i % howManyAcrossSmall) * 17) + "," + (Math.floor(i/howManyAcrossSmall) * 17) + ")"})
+            .attr("transform", function(d, i){ return "translate(" + ((i % howManyAcrossSmall) * 14) + "," + (Math.floor(i/howManyAcrossSmall) * 14) + ")"})
             .append('rect')
-            .attr("width",50)
-            .attr("height",50)
+            .attr("width",40)
+            .attr("height",40)
             .attr("transform","scale(0.3)") 
             .style("fill", "white")                                   
             .transition()
-            .duration(1000)
+            .duration(3000)
+            .delay(function(d,i){ return i * 10;})
             .style("fill", "#2BAA91");
 
 
@@ -488,28 +533,30 @@
             .data(secondArray)
             .enter()
             .append("g")
-            .attr("transform", function(d, i){ return "translate(" + ((i % howManyAcrossSmall) * 17) + "," + (Math.floor(i/howManyAcrossSmall) * 17) + ")"})
+            .attr("transform", function(d, i){ return "translate(" + ((i % howManyAcrossSmall) * 14) + "," + (Math.floor(i/howManyAcrossSmall) * 14) + ")"})
             .append('rect')
-            .attr("width",50)
-            .attr("height",50)
+            .attr("width",40)
+            .attr("height",40)
             .attr("transform","scale(0.3)") 
             .style("fill", "white")                                   
             .transition()
-            .duration(1000)
+            .duration(5000)
+            .delay(function(d,i){ return i * 10;})
             .style("fill", "#CC3E21");
 
             wholesale.selectAll("g")
             .data(thirdArray)
             .enter()
             .append("g")
-            .attr("transform", function(d, i){ return "translate(" + ((i % howManyAcrossSmall) * 17) + "," + (Math.floor(i/howManyAcrossSmall) * 17) + ")"})
+            .attr("transform", function(d, i){ return "translate(" + ((i % howManyAcrossSmall) * 14) + "," + (Math.floor(i/howManyAcrossSmall) * 14) + ")"})
             .append('rect')
-            .attr("width",50)
-            .attr("height",50)
+            .attr("width",40)
+            .attr("height",40)
             .attr("transform","scale(0.3)") 
             .style("fill", "white")                                   
             .transition()
-            .duration(1000)
+            .duration(3000)
+            .delay(function(d,i){ return i * 10;})
             .style("fill", "#4283D1");
 
 
@@ -517,14 +564,15 @@
             .data(fourthArray)
             .enter()
             .append("g")
-            .attr("transform", function(d, i){ return "translate(" + ((i % howManyAcrossSmall) * 17) + "," + (Math.floor(i/howManyAcrossSmall) * 17) + ")"})
+            .attr("transform", function(d, i){ return "translate(" + ((i % howManyAcrossSmall) * 14) + "," + (Math.floor(i/howManyAcrossSmall) * 14) + ")"})
             .append('rect')
-            .attr("width",50)
-            .attr("height",50)
+            .attr("width",40)
+            .attr("height",40)
             .attr("transform","scale(0.3)") 
             .style("fill", "white")                                   
             .transition()
-            .duration(1000)
+            .duration(5000)
+            .delay(function(d,i){ return i * 10;})
             .style("fill", "#FFBB00");
 
 
@@ -723,6 +771,11 @@
         }
         $('#containerLevel' + currentNextIndex).hide();
         currentNextIndex -= 1;
+        if(currentNextIndex==2){
+            $('#legend').hide();
+        }else{
+            $('#legend').show();
+        };
         $('#containerLevel' + currentNextIndex).show();
     });
     $('#next').click(function(){
@@ -731,7 +784,14 @@
             return;
         }
         $('#containerLevel' + currentNextIndex).hide();
+
         currentNextIndex += 1;
+        if(currentNextIndex==2){
+            $('#legend').hide();
+        }else{
+            $('#legend').show();
+        };
+        
         $('#containerLevel' + currentNextIndex).show();
     });
 
