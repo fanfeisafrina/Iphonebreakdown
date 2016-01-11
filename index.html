@@ -477,6 +477,11 @@ p{
         .attr("width",50)
         .attr("height",50)
         .attr("transform","scale(0.3)")
+        .style("fill", "white")
+        .transition()
+        .duration(1000)
+        .delay(function(d,i){ return i * 10;})
+        .style("fill", function(d){ return d; });
         .style("fill", function(d){ return d; });
 
 
@@ -588,7 +593,8 @@ p{
     .attr("transform","scale(0.3)") 
     .style("fill", "white")                                   
     .transition()
-    .duration(1000)
+    .duration(5000)
+    .delay(function(d,i){ return i * 10;})
     .style("fill", "#2BAA91");
 
 
@@ -603,7 +609,8 @@ p{
     .attr("transform","scale(0.3)") 
     .style("fill", "white")                                   
     .transition()
-    .duration(1000)
+    .duration(5000)
+    .delay(function(d,i){ return i * 10;})
     .style("fill", "#2BAA91");
 
     processor.selectAll("g")
@@ -617,7 +624,8 @@ p{
     .attr("transform","scale(0.3)") 
     .style("fill", "white")                                   
     .transition()
-    .duration(1000)
+    .duration(5000)
+    .delay(function(d,i){ return i * 10;})
     .style("fill", "#2BAA91");
 
 
@@ -632,7 +640,8 @@ p{
     .attr("transform","scale(0.3)") 
     .style("fill", "white")                                   
     .transition()
-    .duration(1000)
+    .duration(5000)
+    .delay(function(d,i){ return i * 10;})
     .style("fill", "#2BAA91");
 
     camera.selectAll("g")
@@ -646,7 +655,8 @@ p{
     .attr("transform","scale(0.3)") 
     .style("fill", "white")                                   
     .transition()
-    .duration(1000)
+    .duration(5000)
+    .delay(function(d,i){ return i * 10;})
     .style("fill", "#2BAA91");
 
     cellular.selectAll("g")
@@ -660,7 +670,8 @@ p{
     .attr("transform","scale(0.3)") 
     .style("fill", "white")                                   
     .transition()
-    .duration(1000)
+    .duration(5000)
+    .delay(function(d,i){ return i * 10;})
     .style("fill", "#2BAA91");
 
     wireless.selectAll("g")
@@ -674,7 +685,8 @@ p{
     .attr("transform","scale(0.3)") 
     .style("fill", "white")                                   
     .transition()
-    .duration(1000)
+    .duration(5000)
+    .delay(function(d,i){ return i * 10;})
     .style("fill", "#2BAA91");
 
     battery.selectAll("g")
@@ -688,7 +700,8 @@ p{
     .attr("transform","scale(0.3)") 
     .style("fill", "white")                                   
     .transition()
-    .duration(1000)
+    .duration(5000)
+    .delay(function(d,i){ return i * 10;})
     .style("fill", "#2BAA91");
 
     power.selectAll("g")
@@ -702,7 +715,8 @@ p{
     .attr("transform","scale(0.3)") 
     .style("fill", "white")                                   
     .transition()
-    .duration(1000)
+    .duration(5000)
+    .delay(function(d,i){ return i * 10;})
     .style("fill", "#2BAA91");
 
     mechanical.selectAll("g")
@@ -716,7 +730,8 @@ p{
     .attr("transform","scale(0.3)") 
     .style("fill", "white")                                   
     .transition()
-    .duration(1000)
+    .duration(10000)
+    .delay(function(d,i){ return i * 10;})
     .style("fill", "#2BAA91");
 
     packaging.selectAll("g")
@@ -730,7 +745,8 @@ p{
     .attr("transform","scale(0.3)") 
     .style("fill", "white")                                   
     .transition()
-    .duration(1000)
+    .duration(5000)
+    .delay(function(d,i){ return i * 10;})
     .style("fill", "#2BAA91");
 
     production.selectAll("g")
@@ -744,7 +760,8 @@ p{
     .attr("transform","scale(0.3)") 
     .style("fill", "white")                                   
     .transition()
-    .duration(1000)
+    .duration(5000)
+    .delay(function(d,i){ return i * 10;})
     .style("fill", "#2BAA91");
 
     licensing.selectAll("g")
@@ -758,7 +775,8 @@ p{
     .attr("transform","scale(0.3)") 
     .style("fill", "white")                                   
     .transition()
-    .duration(1000)
+    .duration(5000)
+    .delay(function(d,i){ return i * 10;})
     .style("fill", "#2BAA91");
 
 
