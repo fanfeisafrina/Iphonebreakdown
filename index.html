@@ -16,7 +16,7 @@
     }
     #legend {
         position: absolute;
-        top: 450px;
+        top: 500px;
         right: 200px;
     }
     #title{
@@ -29,7 +29,7 @@
     div#controls {
         position: absolute;
         left: 480px;
-        top: 500px;
+        top: 550px;
         padding: 24px 0px 12px 0px;
         text-align: center;
         font-size: 12px;
@@ -171,6 +171,17 @@ p{
     font-family: 'Open Sans Condensed', sans-serif;
 }
 
+#source{
+    display: inline;
+    padding-left: 100px;
+    padding-right: 100px;
+    color: #969696;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 18px;
+    top:450px;
+}
+
+
 </style>
 </head>
 <body>
@@ -179,6 +190,7 @@ p{
     
     <div id="containerLevel0" class="container" >
         <p>Do you know how much money Apple is making off every device it sells? This cost calculation is for the USA edition of both the iPhone 5 with 16GB of internal file storage and LTE connectivity. Every variation of a device has a different Bill of Materials, so even changing the color of a phone might alter its price by a little. </p>
+        <p id="source">Source: IHS iSuppli Research, September 2012</p>
 
     </div>
 
@@ -481,7 +493,6 @@ p{
         .transition()
         .duration(1000)
         .delay(function(d,i){ return i * 10;})
-        .style("fill", function(d){ return d; });
         .style("fill", function(d){ return d; });
 
 
